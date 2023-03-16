@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+@mixin position-center($text-align: center) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: $text-align;
+    }
+
+    .loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    }
+
+    .loading-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+        span {
+            display: inline-block;
+            margin: 0 5px;
+            color: #fff;
+            font-family: 'Quattrocento Sans', sans-serif;
+
+            &:nth-child(0 + 1) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (1/5)+s infinite linear alternate;
+            }
+
+            &:nth-child(1 + 1) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (2/5)+s infinite linear alternate;
+            }
+
+            &:nth-child(2 + 1) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (3/5)+s infinite linear alternate;
+            }
+
+            &:nth-child(3 + 1) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (4/5)+s infinite linear alternate;
+            }
+
+            &:nth-child(4 + 1) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (5/5)+s infinite linear alternate;
+            }
+
+            &:nth-child(5 + 1) {
+                filter: blur(0px);
+                animation: blur-text 1.5s (4/5)+s infinite linear alternate;
+            }
+        }
+    }
+
+    @keyframes blur-text {
+        0% {filter: blur(0px);}
+        100% {filter: blur(4px);}
+    }
